@@ -32,15 +32,15 @@ class SignPresenter extends  Nette\Application\UI\Presenter
         $renderer = new Forms\BT3Renderer();
         $form->setRenderer($renderer);
 
-        $form->addText('username', 'Username:')
-            ->setRequired('Please enter your username.');
+        $form->addText('username', 'Jméno:')
+            ->setRequired('Vložte uživatelské jméno.');
 
-        $form->addPassword('password', 'Password:')
-            ->setRequired('Please enter your password.');
+        $form->addPassword('password', 'Heslo:')
+            ->setRequired('Vložte heslo.');
 
-        $form->addCheckbox('remember', 'Keep me signed in');
+        $form->addCheckbox('remember', 'Pamatovat přihlášení');
 
-        $form->addSubmit('send', 'Sign in');
+        $form->addSubmit('send', 'Přihlásit');
 
         $form->onSuccess[] = array($this, 'formSucceeded');
         return $form;
