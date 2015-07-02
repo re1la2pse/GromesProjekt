@@ -8,9 +8,10 @@
 
 namespace App\Forms;
 
+use Nette;
 use Nette\Application\UI\Form;
 
-class baseBT3Form {
+class baseBT3Form extends Nette\Object {
 
     //Vrati formular s nastavenym rendererem pro Bootstrapu 3
     protected function getBootstrapForm() {
