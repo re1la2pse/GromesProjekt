@@ -33,8 +33,8 @@ class HomepagePresenter extends BasePresenter
         $form->onSuccess[] = function (UI\Form $form) {
             //$mySession = $this->session->getSection('publicModule');
 
-            $this->flashMessage($this->PMSession->value);
-            $this->redirect(':Admin:Homepage:default');
+            //$this->flashMessage($this->PMSession->value);
+            $this->redirect('Homepage:default');
         };
         return $form;
     }
