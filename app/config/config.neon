@@ -29,4 +29,5 @@ session:
 services:
 	- App\Model\CredentialsAuthenticator
 	- App\Forms\HomepageForm
+	- App\Forms\RegistrForm
 	router: App\RouterFactory::createRouter
