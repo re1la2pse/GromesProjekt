@@ -54,16 +54,16 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a class="page-scroll" href="#services">Link 1</a>
+                            <a class="page-scroll" n:href="Homepage:default#services">Link 1</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#portfolio">Link 2</a>
+                            <a class="page-scroll" n:href="Homepage:default#portfolio">Link 2</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#about">Link 3</a>
+                            <a class="page-scroll" n:href="Homepage:default#about">Link 3</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#team">Link 4</a>
+                            <a class="page-scroll" n:href="Homepage:default#team">Link 4</a>
                         </li>
                         {if  $user->loggedIn}
                             <li>
@@ -74,7 +74,7 @@
                             {if $user->loggedIn}
                                 <li><a n:href="Sign:out">Odhlásit se</a></li>
                             {else}
-                                <li><a n:href="Sign:in">Přihlásit se</a></li>
+                                <li><a n:href="Sign:in" n:class="$presenter->isLinkCurrent('Sign:in') ? currentLink">Přihlásit se</a></li>
                             {/if}
                         </li>
                     </ul>

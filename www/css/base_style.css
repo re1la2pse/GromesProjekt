@@ -183,12 +183,15 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default .nav li a:hover,
-.navbar-default .nav li a:focus {
+.navbar-default .nav li a:focus,
+.navbar-default .currentLink {
     outline: 0;
     border-radius: 5px;
     color: #fff;
     background-color: #fed136;
 }
+
+
 
 #myProfile {
     outline: 0;

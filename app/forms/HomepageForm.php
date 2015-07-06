@@ -14,7 +14,7 @@ use Nette;
 class HomepageForm extends baseBT3Form
 {
     /** @var Nette\Http\Session */
-    private $session;
+   /* private $session;
 
     private $PMSession;
 
@@ -22,7 +22,7 @@ class HomepageForm extends baseBT3Form
     {
         $this->session = $session;
         $this->PMSession = $session->getSection('publicModule');
-    }
+    }*/
 
     public function create()
     {
@@ -58,6 +58,6 @@ class HomepageForm extends baseBT3Form
 
     public function homepageFormSucceeded($form, $values)
     {
-        $this->PMSession->value = "zkouška session  aaa 2222225555";
+       // $this->PMSession->value = "zkouška session  aaa 2222225555";
     }
 }
