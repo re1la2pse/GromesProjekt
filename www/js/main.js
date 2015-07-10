@@ -6,5 +6,4 @@ $(function(){
         $('#homepageForm').slideToggle();
         return false;
     });
-
 });

@@ -6,4 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Nextras\\Forms\\' => array($vendorDir . '/nextras/forms/src'),
 );

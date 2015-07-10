@@ -17,6 +17,7 @@ class RegistrForm extends baseBT3Form
     public function createPart1()
     {
         $form = $this->getBootstrapForm();
+       // $form = new Nette\Application\UI\Form();
 
         $form->addText('firstName', 'Jméno:')
              ->setRequired('Zadejte jméno.');
@@ -42,6 +43,9 @@ class RegistrForm extends baseBT3Form
 
         $form->addText('mail', 'E-mail:')
              ->setRequired('Zadejte e-mail.');
+
+        $form->addDatePicker('dateB', 'Datum narození:');
+
 
         $form->addSubmit('submit', 'pokračovat');
 
