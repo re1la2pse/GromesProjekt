@@ -11,8 +11,17 @@ namespace App\Forms;
 use Nette;
 use Nette\Application\UI;
 
+use Tracy\Debugger;
+
 class RegistrForm extends baseBT3Form
 {
+
+    private $session;
+
+    public function __construct(Nette\Http\Session $session)
+    {
+        $this->session = $session;
+    }
 
     public function createPart1()
     {
@@ -56,6 +65,10 @@ class RegistrForm extends baseBT3Form
     public function registrFormSucceeded($form, $values)
     {
         //zpracovani dat z formu
+        $mySession = $this->session->getSection('registr');
+        $mySession->value = $values->dateB;
+
+        //Debugger::firelog($values->dateB);
     }
 
 }

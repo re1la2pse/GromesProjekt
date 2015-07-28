@@ -7,6 +7,8 @@ use Nette,
 use App\Forms;
 use Nette\Application\UI;
 
+use Tracy\Debugger;
+
 
 /**
  * Homepage presenter.
@@ -34,7 +36,7 @@ class HomepagePresenter extends BasePresenter
             //$mySession = $this->session->getSection('publicModule');
 
             //$this->flashMessage($this->PMSession->value);
-            $this->redirect('Homepage:default');
+            $this->redirect('Search:search');
         };
         return $form;
     }
@@ -42,6 +44,8 @@ class HomepagePresenter extends BasePresenter
 	public function renderDefault()
 	{
 		$this->template->style = 'c_homepage';
+
+
 	}
 
 }

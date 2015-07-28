@@ -8,6 +8,7 @@
 
 namespace App\ClientModule\Presenters;
 
+use Nette;
 use App\Forms;
 use Nette\Application\UI;
 
@@ -17,17 +18,25 @@ use Nette\Application\UI;
  */
 class RegistrPresenter extends BasePresenter
 {
+    private $registrSession;
+
     /**
      * @inject
      * @var Forms\RegistrForm
      */
     public $registrForm;
 
+    public function __construct(Nette\Http\Session $session)
+    {
+        //parent::__construct($session);
+        $this->registrSession = $session->getSection('registr');
+    }
+
     public function createComponentRegistrFormPart1()
     {
         $form = $this->registrForm->createPart1();
         $form->onSuccess[] = function(UI\Form $form) {
-            //$this->flashMessage($this->PMSession->value);
+            $this->flashMessage($this->registrSession->value);
             $this->redirect('Homepage:default');
         };
 
